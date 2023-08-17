@@ -106,7 +106,7 @@ export default props => {
                     {
                         projetos.map(projeto => {
                             return (
-                                <a href={projeto.link}>
+                                <a href={projeto.link} target="blank">
                                     <Card className="projeto">
                                         <Card.Img variant="top" src={projeto.img} />
                                         <Card.Body>
