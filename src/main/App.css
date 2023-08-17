@@ -1,0 +1,208 @@
+@font-face {
+    font-family: "UbuntuMono-Bold";
+    src: url('../assets/Ubuntu_Mono/UbuntuMono-Bold.ttf');
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #1A1B25;
+    color: white;
+    font-family: UbuntuMono-Bold;
+}
+
+.portifolio{
+    display: grid;
+    height: 100vh;
+    padding: 100px;
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-areas: 
+        'header main';
+}
+
+header {
+    grid-area: header;
+    position: fixed;
+    display: flex;
+    height: 85vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    grid-area: main;
+}
+
+.projeto {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    color: white;
+    margin-top: 30px;
+    padding: 10px;
+    border: none;
+    margin-bottom: 30px;
+
+}
+
+.projeto:hover{
+    background-color: rgba(255, 248, 248, 0.041);
+    border-radius: 10px;
+}
+.projeto img {
+    width: 200px;
+    height: 100px;
+}
+
+.sobre{
+    position: relative;
+    color: rgba(255, 255, 255, 0.685);
+    font-size: 1.2em;
+    right: 60px;
+    margin-bottom: 60px;
+    border: 1px white solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.sobre p h4{
+    color:#8be580
+}
+
+.punpun {
+    width: 80px;
+    transform: translate(-40px, 0px);
+}
+
+.titulo h1{
+    font-size: 3.5em;
+}
+
+.titulo h5 {
+    color: rgba(255, 255, 255, 0.63)
+}
+
+ul {
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.452);
+}
+
+.tecnologias span {
+    background-color: rgb(39, 49, 71);
+    padding: 8px;
+    margin-right: 5px;
+    border-radius: 15px;
+    font-size: 0.8em;
+}
+
+ .social {
+    position: relative;
+    display: flex;
+    bottom: 70px;
+}
+.social a {
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social a:hover{
+    color: white;
+}
+
+nav ul{
+    position: relative;
+    top: 100px;
+    height: 80px;
+    margin-bottom: 0;
+}
+
+.lista-nav li{
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.lista-nav a:hover{
+    color: #8be580;
+}
+
+.destacada {
+    color: #8be580;
+}
+.destacada::before{
+    content: "<";
+    color: white;
+}
+.destacada::after{
+    content: "/>";
+    color: white;
+
+}
+
+.reponsive-projects, .reponsive-about{
+    display: none;
+    color: white;
+}
+
+@media(max-width: 1140px){
+    .portifolio{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    header {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .titulo{
+        width: 100vw;
+        left: none;
+        right: none;
+    }
+
+    .projetos{
+        margin-left: 10px;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .sobre{
+        border: none;
+        width: 90vw;
+        font-size: 1em;
+        right: 0px;
+        margin-bottom: 10px;
+    }
+    .punpun {
+        display: none;
+    }
+
+   
+    .projeto{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 98vw;
+        border-bottom: 1px white solid;
+        /* border-top: 1px white solid; */
+    }
+
+    .social{
+        bottom: 0px;
+    }
+
+    .reponsive-projects, .reponsive-about{
+        display: block;
+    }
+    
+}
